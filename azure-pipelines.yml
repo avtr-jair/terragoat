@@ -22,5 +22,5 @@ steps:
 - powershell: |
     fcli ssc session login --url https://win-rv0b57m816h:8443/ssc --user Admin --password Avattar.2026 --sc-sast-url https://win-rv0b57m816h:8444/scancentral-ctrl -c ClientSSC --disable sc-dast
   
-    fcli ssc artifact upload -av terraform:1.0 -f $(Build.ArtifactStagingDirectory)\sca_artifacts\ejemplo-terraform.fpr
+    fcli ssc artifact upload --av terraform:1 -f $(Build.ArtifactStagingDirectory)\sca_artifacts\ejemplo-terraform.fpr
   displayName: 'PowerShell multilinea'
